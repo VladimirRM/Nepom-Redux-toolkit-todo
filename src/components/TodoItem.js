@@ -1,22 +1,21 @@
-import React from 'react'
+import React from "react";
 
-const TodoItem = ({id,text,completed}) => {
+const TodoItem = ({ id, text, completed, removeTodo, toggleTodoComplete }) => {
   return (
     <div>
-           <li key={todo.id}>
-            <input
-              type="checkbox"
-              checked={todo.completed}
-              onChange={() => toggleTodoComplete(todo.id)}
-            />
-            <span>{todo.text}</span>
-            <span className="delete" onClick={() => removeTodo(todo.id)}>
-              &times;
-            </span>
-          </li>
-      
+      <li>
+        <input
+          type="checkbox"
+          checked={completed}
+          onChange={() => toggleTodoComplete(id)}
+        />
+        <span>{text}</span>
+        <span className="delete" onClick={() => removeTodo(id)}>
+          &times;
+        </span>
+      </li>
     </div>
-  )
-}
+  );
+};
 
-export default TodoItem
+export default TodoItem;
