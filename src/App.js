@@ -40,6 +40,8 @@ function App() {
       <label>
  
       </label>
+      <inputField text={text} handleSubmit={handelSubmit}
+      handleInput={handleInput}/>
 
       <TodoList todos={todos} toggleTodoComplete={toggleTodoComplete}
       removeTodo={removeTodo}/>
