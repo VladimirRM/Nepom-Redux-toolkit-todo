@@ -1,13 +1,19 @@
-import React from 'react'
-import TodoItem from './TodoItem'
+import React from "react";
+import TodoItem from "./TodoItem";
 
-const TodoList = ({todos,removeTodo,toggleTodoComplete}) => {
+const TodoList = ({ todos, removeTodo, toggleTodoComplete }) => {
   return (
     <ul>
-      {todos.map(todo=><TodoItem key={todo.id}{...todo}removeTodo={removeTodo}
-      toggleTodoComplete={toggleTodoComplete}/>)}
+      {todos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          removeTodo={removeTodo}
+          toggleTodoComplete={toggleTodoComplete}
+          {...todo}
+        />
+      ))}
     </ul>
-  )
-}
+  );
+};
 
-export default TodoList
+export default TodoList;

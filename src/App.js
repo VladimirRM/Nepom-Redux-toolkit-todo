@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import TodoList from "./components/TodoList";
-import inputField from "./components/inputField";
+import InputField from "./components/inputField";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -37,15 +37,13 @@ function App() {
   };
   return (
     <div className="App">
-      <label>
- 
-      </label>
-      <inputField text={text} handleSubmit={handelSubmit}
-      handleInput={handleInput}/>
+      <InputField text={text} handleInput={setText}  handleSubmit={addTodo} />
 
-      <TodoList todos={todos} toggleTodoComplete={toggleTodoComplete}
-      removeTodo={removeTodo}/>
-
+      <TodoList
+        todos={todos}
+        toggleTodoComplete={toggleTodoComplete}
+        removeTodo={removeTodo}
+      />
     </div>
   );
 }
