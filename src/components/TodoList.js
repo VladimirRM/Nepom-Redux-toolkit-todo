@@ -1,7 +1,7 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-const TodoList = ({ todos, removeTodo, toggleTodoComplete }) => {
+const TodoList = ({ removeTodo, toggleTodoComplete }) => {
   return (
     <ul>
       {todos.map((todo) => (

@@ -4,7 +4,7 @@ import TodoList from "./components/TodoList";
 import InputField from "./components/inputField";
 
 function App() {
-  const [todos, setTodos] = useState([]);
+
   const [text, setText] = useState("");
 
   const addTodo = () => {
@@ -40,7 +40,7 @@ function App() {
       <InputField text={text} handleInput={setText}  handleSubmit={addTodo} />
 
       <TodoList
-        todos={todos}
+
         toggleTodoComplete={toggleTodoComplete}
         removeTodo={removeTodo}
       />
