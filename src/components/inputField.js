@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NewTodoForm = () => {
+const inputField = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const NewTodoForm = () => {
   )
 }
 
-export default NewTodoForm
+export default inputField
